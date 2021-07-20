@@ -2,12 +2,21 @@ import CardList from '@/components/CardList'
 import {API_URL} from '@/config/index'
 
 import Layout from "@/components/Layout"
+import styled from 'styled-components'
 
+const Container = styled.section`
+    width: 100%;
+    max-width: 120rem;
+    padding: 0 2rem;
+
+`;
 
 const PlaygroundsPage = ({playgrounds}) => {
     return (
         <Layout>
-            <CardList title={"Latest Update"} playgrounds={playgrounds} />
+            <Container>
+                <CardList title={"Latest Update"} playgrounds={playgrounds} />
+            </Container>
         </Layout>
     )
 }

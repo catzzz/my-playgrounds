@@ -21,7 +21,7 @@ const seedData = () =>{
             image: '/images/playground-1.jpeg',
             description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam dolores vero perferendis laudantium, consequuntur voluptatibus nulla architecto, sit soluta esse iure sed labore ipsam a cum nihil atque molestiae deserunt!',
             rates:rates,
-            slug:`${slug.replace(/\s/g,'-')}`
+            slug:`${slug.toLowerCase().replace(/\s/g,'-')}`
         })
         playgrounds.push(playground)
     }
