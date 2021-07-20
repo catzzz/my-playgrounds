@@ -5,24 +5,32 @@ import Navbar from './Navbar'
 import Footer from './Footer'
 import styled from 'styled-components'
 import {useRouter} from 'next/router'
-
+import {useState} from 'react'
 const LayoutStyles = styled.div`
     display: flex;
     flex-direction: column;
     background-color: var(--color-grey-light-1);
+    position: relative;
 `;
 
 const LayoutMain = styled.div`
+   
     min-height: calc(100vh - 14rem);
-    
     max-width: 120rem;
     width: 100%;
-    margin: 0 auto;
-    padding: 0 2rem;
+    margin:7rem auto 0 auto;
+
 `;
 
 export default function Layout({title, keywords, description, children}) {
+
     const router = useRouter()
+
+    const [isMenuOpen, setIsMenuOpen] = useState(false)
+    const toggleMenu = () =>{
+      
+      setIsMenuOpen(!isMenuOpen)
+    }
     return (
         <LayoutStyles>
             <Head>
@@ -30,7 +38,7 @@ export default function Layout({title, keywords, description, children}) {
                 <meta name='description' content={description} />
                 <meta key='keywords' content={keywords} />
             </Head>
-            <Navbar />
+            <Navbar isMenuOpen={isMenuOpen} toggleMenu={toggleMenu}/>
             {/* router path === '/', then show show case */}
             <LayoutMain>
             {children}
