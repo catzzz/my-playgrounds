@@ -16,6 +16,7 @@ const seedData = () =>{
         const state = cities[random1000].state
         const slug = `${state} ${city} ${sample(descriptors)} ${sample(places)}`
         const playground = new Object({
+            id:`${i}`,
             location: `${city}, ${state}`,
             title: `${sample(descriptors)} ${sample(places)}`,
             image: '/images/playground-1.jpeg',

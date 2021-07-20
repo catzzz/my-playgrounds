@@ -9,10 +9,10 @@ import {
   CardBadge,
 } from "./card.module";
 
-const Card = ({ image, title, location, rates, slug }) => {
+const Card = ({ image, title, location, rates, slug ,id }) => {
   return (
     <CardStyles>
-      <Link href={`/project/${slug}`}>
+      <Link href={`/playgrounds/${slug}`}>
         <a>
           <Image src={image} alt={title} height={897} width={1355} />
           <CardDetail>

@@ -13,7 +13,7 @@ const Container = styled.section`
 
 const PlaygroundsPage = ({playgrounds}) => {
     return (
-        <Layout>
+        <Layout title="Playgrounds List">
             <Container>
                 <CardList title={"Latest Update"} playgrounds={playgrounds} />
             </Container>

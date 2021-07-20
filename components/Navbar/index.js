@@ -48,8 +48,8 @@ const Navbar = ({isMenuOpen, toggleMenu}) => {
                         </Link>
                     </NavLink>
                     <LinkBtn>
-                        <Link href="/">
-                            <a onClick={toggleMenu}>LogIn</a>
+                        <Link href="/account/login">
+                            <a onClick={toggleMenu}>Login</a>
                         </Link>
                     </LinkBtn>
                 </Right>

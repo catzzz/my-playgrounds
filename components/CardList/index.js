@@ -17,8 +17,9 @@ const CardList = ({title, playgrounds}) => {
                         title = {playground.title}
                         location= {playground.location}
                         rates ={playground.rates}
-                        key = {index}
+                        key = {playground.id}
                         slug = {playground.slug}
+                        id = {playground.id}
                     />
                 
                 ))}

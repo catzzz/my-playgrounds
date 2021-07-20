@@ -8,7 +8,7 @@ export const Container = styled.section`
     width: 100%;
     max-width: 120rem;
     display: flex;
-    color:var(--color-grey-dark-1)
+    color:var(--color-grey-dark-1);
 
 `
 
@@ -25,6 +25,7 @@ export const Location = styled.p`
 `;
 
 const PlaygroundPage = ({playground}) => {
+    console.log(playground)
     return (
         <Layout>
             <Container>
@@ -37,10 +38,12 @@ const PlaygroundPage = ({playground}) => {
 
 export default PlaygroundPage
 
+
+
 export async function getStaticPaths() {
     const res = await fetch(`${API_URL}/playgrounds`);
     const playgrounds = await res.json();
-  
+    console.log(res)
     const paths = playgrounds.map((evt) => ({
       params: { slug: evt.slug },
     }));

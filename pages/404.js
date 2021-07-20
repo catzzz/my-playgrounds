@@ -18,7 +18,7 @@ export const Container = styled.div`
         padding: .6rem 1.2rem;
         border:2px solid var(--color-grey-dark-2);
         border-radius: 2rem;
-        
+        margin-top: 2rem;
         &:link,
         &:visited{
             text-decoration: none;
